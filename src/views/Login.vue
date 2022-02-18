@@ -16,7 +16,7 @@
                 <van-field type="password" v-model="state.password" placeholder="请输入密码" />
             </div>
         </div>
-        <van-button type="primary" size="large" class="mt-12" @click="toHome">登&nbsp;录</van-button>
+        <van-button type="primary" size="large" class="mt-12" @click="toHome">登&nbsp;&nbsp;录</van-button>
     </div>
 </template>
 

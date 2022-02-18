@@ -15,15 +15,15 @@
         <van-tabs v-model:active="state.active" color="#60A5FA">
             <van-tab title="待审核">
                 <div class="w-full h-2 bg-gray-100"></div>
-                <ApplyList :data="state.data" />
+                <ReviewList :data="state.data" />
             </van-tab>
             <van-tab title="审核不通过">
                 <div class="w-full h-2 bg-gray-100"></div>
-                <ApplyList :data="state.data" />
+                <ReviewList :data="state.data" />
             </van-tab>
             <van-tab title="审核通过">
                 <div class="w-full h-2 bg-gray-100"></div>
-                <ApplyList :data="state.data" />
+                <ReviewList :data="state.data" />
             </van-tab>
         </van-tabs>
     </div>
@@ -32,13 +32,13 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
-import ApplyList from '@/components/ApplyList.vue'
-import type { applyItem } from '@/models'
-import { getApplyList } from '@/services'
+import ReviewList from '@/components/ReviewList.vue'
+import type { reviewItem } from '@/models'
+import { getReviewList } from '@/services'
 
 type stateType = {
     active: number,
-    data: applyItem[]
+    data: reviewItem[]
 }
 
 const router = useRouter()
@@ -48,7 +48,7 @@ const state: stateType = reactive({
 })
 
 async function init() {
-    state.data = await getApplyList()
+    state.data = await getReviewList()
 }
 
 function back() {

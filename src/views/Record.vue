@@ -18,12 +18,12 @@
 import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
 import RecordList from '@/components/RecordList.vue'
-import type { applyItem } from '@/models'
-import { getApplyList } from '@/services'
+import type { reviewItem } from '@/models'
+import { getReviewList } from '@/services'
 
 type stateType = {
     active: number,
-    data: applyItem[]
+    data: reviewItem[]
 }
 
 const router = useRouter()
@@ -33,7 +33,7 @@ const state: stateType = reactive({
 })
 
 async function init() {
-    state.data = await getApplyList()
+    state.data = await getReviewList()
 }
 
 function back() {

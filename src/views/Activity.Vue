@@ -8,7 +8,13 @@
         </template>
         <template #right>
             <van-icon name="search" size="16" color="white" class="my-auto" />
-            <van-icon name="plus" size="16" color="white" class="my-auto ml-2" />
+            <van-icon
+                name="plus"
+                size="16"
+                color="white"
+                class="my-auto ml-2"
+                @click="() => router.push('/activityAdd')"
+            />
         </template>
     </van-nav-bar>
     <div class="flex flex-col">

@@ -23,17 +23,17 @@
                     <div>联系电话:&nbsp;{{ item.tel }}</div>
                     <div>居住地址:&nbsp;{{ item.location }}</div>
                 </div>
-                <van-icon name="phone" size="20" color="#60A5FA" class="m-auto" />
+                <van-icon name="phone-circle" size="20" color="#60A5FA" class="m-auto" />
             </div>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import type { applyItem } from '@/models'
+import type { reviewItem } from '@/models'
 
 type propsType = {
-    data: applyItem[]
+    data: reviewItem[]
 }
 
 const props = defineProps<propsType>()

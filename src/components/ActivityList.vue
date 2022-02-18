@@ -4,6 +4,7 @@
             v-for="item in props.data"
             :key="item.id"
             class="flex flex-col space-y-2 p-4 shadow-md"
+            @click="() => router.push({ name: 'activityDetail', query: { id: item.id } })"
         >
             <div class="flex">
                 <div class="flex w-4/5">
@@ -32,11 +33,13 @@
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router'
 import type { activityItem } from '@/models'
 
 type propsType = {
     data: activityItem[]
 }
 
+const router = useRouter()
 const props = defineProps<propsType>()
 </script>

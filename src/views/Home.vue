@@ -17,7 +17,7 @@
         </div>
         <div class="flex space-x-4 h-20">
             <div class="w-1/2 rounded-md shadow-md" @click="() => router.push('/activity')">活动管理</div>
-            <div class="w-1/2 rounded-md shadow-md" @click="() => router.push('/apply')">报名审核</div>
+            <div class="w-1/2 rounded-md shadow-md" @click="() => router.push('/review')">报名审核</div>
         </div>
         <div class="flex space-x-4 h-20">
             <div class="w-1/2 rounded-md shadow-md" @click="() => router.push('/person')">先锋人物</div>
@@ -31,13 +31,13 @@
                 <div class="text-blue-400 text-xl font-semibold -mb-2">待审核</div>
             </div>
         </div>
-        <div class="flex w-1/5 justify-end" @click="() => router.push('/record')">
+        <div class="flex w-1/5 justify-end" @click="() => router.push('/review')">
             <div class="my-auto text-sm text-gray-300">查看更多</div>
             <van-icon name="arrow" size="15" color="#D1D5DB" class="my-auto" />
         </div>
     </div>
     <div class="pb-12">
-        <ApplyList :data="state.data" />
+        <ReviewList :data="state.data" />
     </div>
     <FooterNav :active="0" />
 </template>
@@ -45,15 +45,15 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
-import ApplyList from '@/components/ApplyList.vue'
+import ReviewList from '@/components/ReviewList.vue'
 import FooterNav from '@/components/FooterNav.vue'
-import type { applyItem } from '@/models'
-import { getApplyList } from '@/services'
+import type { reviewItem } from '@/models'
+import { getReviewList } from '@/services'
 
 type stateType = {
     location: string,
     notice: string,
-    data: applyItem[]
+    data: reviewItem[]
 }
 
 const router = useRouter()
@@ -66,7 +66,7 @@ const state: stateType = reactive({
 async function init() {
     state.location = '国宾社区第一网格'
     state.notice = '众志成城, 共战疫情主题绘画活动'
-    state.data = await getApplyList()
+    state.data = await getReviewList()
 }
 
 init()

@@ -1,4 +1,4 @@
-export interface applyItem {
+export interface reviewItem {
     id: number,
     name: string,
     attend: string,
@@ -10,6 +10,12 @@ export interface applyItem {
     clock: string,
     pass?: boolean,
     reason?: string
+}
+
+interface videoItem {
+    name: string,
+    length: string,
+    src: string
 }
 
 export interface activityItem {
@@ -25,7 +31,7 @@ export interface activityItem {
     unit: string,
     content: string,
     images: string[],
-    video: string
+    video: videoItem
 }
 
 export interface personItem {
@@ -34,7 +40,7 @@ export interface personItem {
     title: string,
     description: string,
     images: string[],
-    video: string
+    video: videoItem
 }
 
 export interface collectionitem {
@@ -59,5 +65,5 @@ export interface commentItem {
     like: number,
     content: string,
     time: string,
-    children: baseCommentItem[]
+    children?: baseCommentItem[]
 }
