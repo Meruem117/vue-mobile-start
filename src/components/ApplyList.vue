@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="flex">
-                <div class="flex flex-col w-4/5 space-y-2 text-sm">
+                <div class="flex flex-col w-4/5 space-y-2 text-sm text-gray-500">
                     <div class="flex">
                         报名时间:&nbsp;
                         <div class="text-blue-400">{{ item.time }}</div>

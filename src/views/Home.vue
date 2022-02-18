@@ -45,7 +45,7 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
-import ApplyList from '@/components/Apply/ApplyList.vue'
+import ApplyList from '@/components/ApplyList.vue'
 import FooterNav from '@/components/FooterNav.vue'
 import type { applyItem } from '@/models'
 import { getApplyList } from '@/services'

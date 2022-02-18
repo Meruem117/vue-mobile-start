@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import { Button, Icon, Field, Tabbar, TabbarItem, Cell, CellGroup } from 'vant'
+import { Button, Icon, Field, Tabbar, TabbarItem, NavBar, Cell, CellGroup, Tab, Tabs } from 'vant'
 import 'vant/lib/index.css'
 import '@/static/css/index.css'
 
@@ -14,4 +14,7 @@ app.use(router)
     .use(TabbarItem)
     .use(Cell)
     .use(CellGroup)
+    .use(NavBar)
+    .use(Tab)
+    .use(Tabs)
 app.mount('#app')

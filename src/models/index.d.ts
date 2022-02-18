@@ -20,6 +20,7 @@ export interface activityItem {
     location: string,
     start: string,
     end: string,
+    total: number,
     restrict: number,
     unit: string,
     content: string,
