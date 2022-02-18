@@ -1,4 +1,4 @@
-import type { reviewItem, activityItem, personItem, collectionitem, commentItem } from '@/models'
+import type { reviewItem, activityItem, personItem, collectionItem, commentItem } from '@/models'
 
 export async function getReviewList(): Promise<reviewItem[]> {
     return [{
@@ -116,7 +116,7 @@ export async function getPersonList(): Promise<personItem[]> {
     }]
 }
 
-export async function getCollectionList(): Promise<collectionitem[]> {
+export async function getCollectionList(): Promise<collectionItem[]> {
     return [{
         id: 1,
         title: 'XXXXXX',
@@ -138,7 +138,7 @@ export async function getCollectionList(): Promise<collectionitem[]> {
     }]
 }
 
-export async function getAcitivityById(id: number): Promise<activityItem> {
+export async function getActivityById(id: number): Promise<activityItem> {
     console.log(id)
     return {
         id: 1,

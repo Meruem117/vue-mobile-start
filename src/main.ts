@@ -1,7 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import { Button, Icon, Tabbar, TabbarItem, NavBar, Cell, CellGroup, Tab, Tabs, Divider, Form, Field, Popup, Picker, DatetimePicker, Uploader, Image } from 'vant'
+import {
+    Button, Icon, Tabbar, TabbarItem, NavBar, Cell, CellGroup, Tab, Tabs,
+    Divider, Form, Field, Popup, Picker, DatetimePicker, Uploader, Image
+} from 'vant'
 import 'vant/lib/index.css'
 import '@/static/css/index.css'
 

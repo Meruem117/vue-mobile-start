@@ -62,9 +62,9 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
-import ImageList from '@/components/ImageList.vue'
+import ImageList from '@/components/Common/ImageList.vue'
 import type { activityItem } from '@/models'
-import { getAcitivityById } from '@/services'
+import { getActivityById } from '@/services'
 
 type stateType = {
     data: activityItem
@@ -78,7 +78,7 @@ const state: stateType = reactive({
 
 async function init() {
     const id = route.query.id
-    state.data = await getAcitivityById(id)
+    state.data = await getActivityById(id)
 }
 
 function back() {
