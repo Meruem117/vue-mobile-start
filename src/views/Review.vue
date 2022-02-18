@@ -1,6 +1,6 @@
 <template>
   <!-- 1 -->
-  <HeaderNav :title="route.meta.title" right>
+  <HeaderNav right>
     <template #right>
       <van-icon name="search" size="16" color="white" class="my-auto" />
     </template>
@@ -15,7 +15,6 @@
 
 <script setup lang="ts">
 import { reactive } from 'vue'
-import { useRoute } from 'vue-router'
 import HeaderNav from '@/components/Common/HeaderNav.vue'
 import HeadTabs from '@/components/Common/HeadTabs.vue'
 import ReviewList from '@/components/ReviewList.vue'
@@ -28,7 +27,6 @@ type stateType = {
   data: reviewItem[][]
 }
 
-const route = useRoute()
 const state: stateType = reactive({
   active: 0,
   tabs: ['待审核', '审核不通过', '审核通过'],

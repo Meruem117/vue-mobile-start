@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 declare module 'vue-router' {
   interface RouteMeta {
     keepAlive: boolean,
-    title: string
+    title?: string
   }
 }
 
@@ -18,8 +18,7 @@ export default createRouter({
       path: '/login',
       name: 'login',
       meta: {
-        keepAlive: false,
-        title: '登录'
+        keepAlive: false
       },
       component: () => import('@/views/Login.vue')
     },
@@ -27,8 +26,7 @@ export default createRouter({
       path: '/home',
       name: 'home',
       meta: {
-        keepAlive: false,
-        title: '首页'
+        keepAlive: false
       },
       component: () => import('@/views/Home.vue')
     },
@@ -36,8 +34,7 @@ export default createRouter({
       path: '/mine',
       name: 'mine',
       meta: {
-        keepAlive: false,
-        title: '我的'
+        keepAlive: false
       },
       component: () => import('@/views/Mine.vue')
     },

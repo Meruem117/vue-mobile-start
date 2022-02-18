@@ -4,7 +4,7 @@
       <van-icon name="arrow-left" size="20" color="white" class="my-auto" />
     </template>
     <template #title>
-      <div class="text-white text-xl tracking-wider">{{ props.title }}</div>
+      <div class="text-white text-xl tracking-wider">{{ props.title || route.meta.title }}</div>
     </template>
     <template #right v-if="props.right">
       <slot name="right"></slot>
@@ -13,11 +13,12 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 
+const route = useRoute()
 const router = useRouter()
 const props = defineProps<{
-  title: string,
+  title?: string,
   right?: boolean
 }
 >()

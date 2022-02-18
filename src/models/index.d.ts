@@ -53,6 +53,7 @@ export interface collectionItem {
 interface baseCommentItem {
   id: number,
   name: string,
+  avatar: string,
   like: number,
   content: string,
   time: string
@@ -62,6 +63,7 @@ interface baseCommentItem {
 export interface commentItem {
   id: number,
   name: string,
+  avatar: string,
   like: number,
   content: string,
   time: string,

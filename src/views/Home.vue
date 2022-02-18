@@ -35,12 +35,12 @@
     <!-- 3.1 -->
     <div class="flex w-4/5 justify-start">
       <div class="my-auto border_b">
-        <div class="text-blue-400 text-xl font-semibold -mb-2">待审核</div>
+        <span class="g_title block -mb-2">待审核</span>
       </div>
     </div>
     <!-- 3.2 -->
     <div class="flex w-1/5 justify-end" @click="() => router.push('/review')">
-      <div class="my-auto text-gray-300 text-sm">查看更多</div>
+      <span class="my-auto text-gray-300 text-sm">查看更多</span>
       <van-icon name="arrow" size="15" color="#D1D5DB" class="my-auto" />
     </div>
   </div>

@@ -184,19 +184,22 @@ export async function getCommentListByActivityId(id: number): Promise<commentIte
     console.log(id)
     return [{
         id: 1,
-        name: 'xxxx',
+        name: '张三',
+        avatar: 'https://img.yzcdn.cn/vant/cat.jpeg',
         like: 35,
         content: 'xxxxxxxxxx',
         time: 'xxxx-xx-xx',
         children: [{
             id: 3,
             name: 'xxxx',
+            avatar: 'https://img.yzcdn.cn/vant/cat.jpeg',
             like: 35,
             content: 'xxxxxxxxxx',
             time: 'xxxx-xx-xx'
         }, {
             id: 4,
             name: 'xxxx',
+            avatar: 'https://img.yzcdn.cn/vant/cat.jpeg',
             like: 35,
             content: 'xxxxxxxxxx',
             time: 'xxxx-xx-xx'
@@ -204,6 +207,7 @@ export async function getCommentListByActivityId(id: number): Promise<commentIte
     }, {
         id: 2,
         name: 'xxxx',
+        avatar: 'https://img.yzcdn.cn/vant/cat.jpeg',
         like: 35,
         content: 'xxxxxxxxxx',
         time: 'xxxx-xx-xx'

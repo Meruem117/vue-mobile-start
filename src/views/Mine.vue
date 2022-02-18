@@ -5,8 +5,8 @@
       <div class="w-14 h-14 bg-gray-200 rounded-full m-auto"></div>
     </div>
     <div class="flex flex-col space-y-1 my-auto">
-      <div class="text-white text-lg">{{ state.name }}</div>
-      <div class="text-white text-sm font-thin">{{ state.unit }}</div>
+      <span class="text-white text-lg">{{ state.name }}</span>
+      <span class="text-white text-sm font-thin">{{ state.unit }}</span>
     </div>
   </div>
   <!-- 2 -->

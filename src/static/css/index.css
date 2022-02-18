@@ -9,3 +9,7 @@
 .g_list_item {
   @apply flex flex-col space-y-2 shadow-md p-4;
 }
+
+.g_title {
+  @apply text-blue-400 text-lg font-semibold;
+}

@@ -16,8 +16,10 @@ const state: stateType = reactive({
 })
 
 async function init() {
-    const id = route.query.id
-    state.data = await getCommentListByActivityId(id)
+    if (route.query.id) {
+        const id = parseInt(route.query.id.toString())
+        state.data = await getCommentListByActivityId(id)
+    }
 }
 
 init()

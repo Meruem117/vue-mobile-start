@@ -1,6 +1,6 @@
 <template>
   <!-- 1 -->
-  <HeaderNav :title="route.meta.title" right>
+  <HeaderNav right>
     <template #right>
       <van-icon name="search" size="25" color="white" class="my-auto" />
       <van-icon
@@ -18,7 +18,7 @@
 
 <script setup lang="ts">
 import { reactive } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { useRouter } from 'vue-router'
 import HeaderNav from '@/components/Common/HeaderNav.vue'
 import CollectionList from '@/components/CollectionList.vue'
 import type { collectionItem } from '@/models'
@@ -28,7 +28,6 @@ type stateType = {
   data: collectionItem[]
 }
 
-const route = useRoute()
 const router = useRouter()
 const state: stateType = reactive({
   data: []

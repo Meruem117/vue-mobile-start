@@ -1,6 +1,6 @@
 <template>
   <!-- 1 -->
-  <HeaderNav :title="route.meta.title" right>
+  <HeaderNav right>
     <template #right>
       <van-icon name="search" size="25" color="white" class="my-auto" />
       <van-icon
@@ -22,7 +22,7 @@
 
 <script setup lang="ts">
 import { reactive } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { useRouter } from 'vue-router'
 import HeaderNav from '@/components/Common/HeaderNav.vue'
 import HeadTabs from '@/components/Common/HeadTabs.vue'
 import PersonList from '@/components/PersonList.vue'
@@ -35,7 +35,6 @@ type stateType = {
   data: personItem[][]
 }
 
-const route = useRoute()
 const router = useRouter()
 const state: stateType = reactive({
   active: 0,
