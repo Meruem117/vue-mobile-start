@@ -1,5 +1,5 @@
 <template>
-  <div class="g_list_container">
+  <div class="g_container">
     <div
       v-for="item in props.data"
       :key="item.id"

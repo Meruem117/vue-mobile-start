@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.g_list_container {
+.g_container {
   @apply flex flex-col space-y-4 p-4;
 }
 

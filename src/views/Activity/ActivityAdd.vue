@@ -1,8 +1,9 @@
 <template>
   <HeaderNav />
-  <div class="g_list_container">
+  <div class="g_container">
     <div class="g_title">基本信息</div>
     <van-form class="flex flex-col space-y-4">
+      <!-- 1 -->
       <van-cell-group class="px-2">
         <span>所属地区*</span>
         <van-field v-model="state.data.area" placeholder="请输入所属地区" />
@@ -67,26 +68,30 @@
           autosize
           type="textarea"
           placeholder="请输入活动具体内容"
-          class="bg-gray-100 mt-2"
+          class="bg-gray-100 rounded mt-2"
         />
       </van-cell-group>
-      <div class="w-full h-2 bg-gray-100"></div>
-      <span class="g_title">精彩影集</span>
-      <span class="text-sm">图片上传(可选择多张)</span>
-      <van-uploader :after-read="afterRead" />
-      <span class="g_title">精彩视频</span>
-      <div class="flex space-x-2">
-        <div class="h-12 w-12 bg-blue-500"></div>
-        <div class="w-40">
-          <span>{{ state.data.video.name || '暂无' }}</span>
-          <span class="text-sm text-gray-400">
-            时长:&nbsp;
-            <span>{{ state.data.video.length || '暂无' }}</span>
-          </span>
-        </div>
-        <van-button type="primary" plain class="rounded-md h-6 my-auto">上传</van-button>
-        <van-button type="danger" plain class="rounded-md h-6 my-auto">删除</van-button>
+      <RowDivider />
+      <!-- 2 -->
+      <div class="g_container">
+        <span class="g_title">精彩影集</span>
+        <span class="text-sm">图片上传(可选择多张)</span>
+        <van-uploader :after-read="afterRead" />
       </div>
+      <RowDivider />
+      <!-- 3 -->
+      <div class="g_container">
+        <span class="g_title">精彩视频</span>
+        <VideoBox :video="state.data.video">
+          <template #button>
+            <div class="flex space-x-2 pl-20">
+              <van-button type="primary" plain class="h-6 rounded-md my-auto">上传</van-button>
+              <van-button type="danger" plain class="h-6 rounded-md my-auto">删除</van-button>
+            </div>
+          </template>
+        </VideoBox>
+      </div>
+      <!-- 4 -->
       <div class="bg-gray-100 p-4">
         <van-button block type="primary" native-type="submit" class="rounded-md">提交</van-button>
       </div>
@@ -96,8 +101,9 @@
 
 <script setup lang="ts">
 import { reactive } from 'vue'
-import { useRouter } from 'vue-router'
 import HeaderNav from '@/components/Common/HeaderNav.vue'
+import VideoBox from '@/components/Common/VideoBox.vue'
+import RowDivider from '@/components/Common/RowDivider.vue'
 import type { activityItem } from '@/models'
 import { convertDatetime } from '@/utils'
 
@@ -108,7 +114,6 @@ type stateType = {
   showEndPicker: boolean
 }
 
-const router = useRouter()
 const state: stateType = reactive({
   data: {} as activityItem,
   showTypePicker: false,
@@ -136,9 +141,5 @@ function onConfirmEnd(value: Date) {
 
 function afterRead(file: any) {
   console.log(file)
-}
-
-function back() {
-  router.go(-1)
 }
 </script>

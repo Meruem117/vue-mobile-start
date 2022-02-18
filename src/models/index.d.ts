@@ -3,16 +3,16 @@ export interface reviewItem {
   name: string,
   attend: string,
   tel: string,
-  gender: number,
+  gender: string,
   age: number,
   location: string,
   time: string,
   clock: string,
-  pass?: boolean,
+  checked?: boolean,
   reason?: string
 }
 
-interface videoItem {
+export interface videoItem {
   name: string,
   length: string,
   src: string

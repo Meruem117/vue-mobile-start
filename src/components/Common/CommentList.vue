@@ -1,5 +1,5 @@
 <template>
-  <div class="g_list_container">
+  <div class="g_container">
     <van-cell-group v-for="item in props.data" :key="item.id">
       <van-cell>
         <template #title class="flex flex-col">

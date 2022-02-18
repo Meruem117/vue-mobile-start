@@ -2,7 +2,7 @@
   <!-- 1 -->
   <HeaderNav />
   <!-- 2 -->
-  <div class="g_list_container">
+  <div class="g_container">
     <van-cell-group>
       <van-cell title="报名人" :value="state.data.name" />
       <van-cell title="活动参与人" :value="state.data.attend" />
@@ -21,7 +21,7 @@ import { reactive } from 'vue'
 import { useRoute } from 'vue-router'
 import HeaderNav from '@/components/Common/HeaderNav.vue'
 import type { reviewItem } from '@/models'
-import { getRecordById } from '@/services'
+import { getReviewById } from '@/services'
 
 type stateType = {
   data: reviewItem
@@ -35,7 +35,7 @@ const state: stateType = reactive({
 async function init() {
   if (route.query.id) {
     const id = parseInt(route.query.id.toString())
-    state.data = await getRecordById(id)
+    state.data = await getReviewById(id)
   }
 }
 

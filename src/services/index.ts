@@ -6,7 +6,7 @@ export async function getReviewList(): Promise<reviewItem[]> {
         name: 'XXX',
         attend: 'XX',
         tel: '1908234750',
-        gender: 0,
+        gender: '男',
         age: 28,
         location: 'xxxxxxx101x',
         time: 'xxxx-xx-xx xx:xx:xx',
@@ -16,7 +16,7 @@ export async function getReviewList(): Promise<reviewItem[]> {
         name: 'XXX',
         attend: 'XX',
         tel: '1908234750',
-        gender: 0,
+        gender: '女',
         age: 28,
         location: 'xxxxxxx101x',
         time: 'xxxx-xx-xx xx:xx:xx',
@@ -26,7 +26,7 @@ export async function getReviewList(): Promise<reviewItem[]> {
         name: 'XXX',
         attend: 'XX',
         tel: '1908234750',
-        gender: 0,
+        gender: '男',
         age: 28,
         location: 'xxxxxxx101x',
         time: 'xxxx-xx-xx xx:xx:xx',
@@ -165,14 +165,14 @@ export async function getActivityById(id: number): Promise<activityItem> {
     }
 }
 
-export async function getRecordById(id: number): Promise<reviewItem> {
+export async function getReviewById(id: number): Promise<reviewItem> {
     console.log(id)
     return {
         id: 1,
         name: 'XXX',
         attend: 'XX',
         tel: '1908234750',
-        gender: 0,
+        gender: '女',
         age: 28,
         location: 'xxxxxxx101x',
         time: 'xxxx-xx-xx xx:xx:xx',
@@ -212,4 +212,24 @@ export async function getCommentListByActivityId(id: number): Promise<commentIte
         content: 'xxxxxxxxxx',
         time: 'xxxx-xx-xx'
     }]
+}
+
+export async function getPersonById(id: number) {
+    console.log(id)
+    return {
+        id: 1,
+        name: 'XXX',
+        title: 'xxxxx xxxxx',
+        description: 'xxxxxxxxxxxxxxxxxxxx',
+        images: [
+            'https://img.yzcdn.cn/vant/cat.jpeg',
+            'https://img.yzcdn.cn/vant/cat.jpeg',
+            'https://img.yzcdn.cn/vant/cat.jpeg'
+        ],
+        video: {
+            name: 'xxxxx',
+            length: 'xxxx',
+            src: 'xxxxxxxxxxx'
+        }
+    }
 }

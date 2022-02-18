@@ -3,14 +3,14 @@ import App from './App.vue'
 import router from './router'
 import {
     Button, Icon, Tabbar, TabbarItem, NavBar, Cell, CellGroup, Tab, Tabs,
-    Divider, Form, Field, Popup, Picker, DatetimePicker, Uploader, Image
+    Divider, Form, Field, Popup, Picker, DatetimePicker, Uploader, Image, Radio, RadioGroup
 } from 'vant'
 import 'vant/lib/index.css'
 import '@/static/css/index.css'
 
 const app = createApp(App)
 app.use(router)
-    .use(Button)
+app.use(Button)
     .use(Icon)
     .use(Tabbar)
     .use(TabbarItem)
@@ -27,4 +27,6 @@ app.use(router)
     .use(DatetimePicker)
     .use(Uploader)
     .use(Image)
+    .use(Radio)
+    .use(RadioGroup)
 app.mount('#app')

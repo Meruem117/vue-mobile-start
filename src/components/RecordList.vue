@@ -1,5 +1,5 @@
 <template>
-  <div class="g_list_container">
+  <div class="g_container">
     <div
       v-for="item in props.data"
       :key="item.id"
@@ -20,7 +20,7 @@
       <div class="flex">
         <span
           class="text-gray-300 text-sm"
-        >{{ GENDER_TEXT[item.gender] }}&nbsp;|&nbsp;{{ item.age }}岁&nbsp;|&nbsp;联系电话:&nbsp;{{ item.tel }}</span>
+        >{{ item.gender }}&nbsp;|&nbsp;{{ item.age }}岁&nbsp;|&nbsp;联系电话:&nbsp;{{ item.tel }}</span>
         <van-icon name="phone" size="10" color="#60A5FA" class="my-auto ml-2" />
       </div>
       <!-- 3 -->
@@ -45,7 +45,6 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 import type { reviewItem } from '@/models'
-import { GENDER_TEXT } from '@/constant'
 
 const router = useRouter()
 const props = defineProps<{

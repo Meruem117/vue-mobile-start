@@ -1,6 +1,6 @@
 <template>
   <HeaderNav />
-  <div class="g_list_container">
+  <div class="g_container">
     <!-- 1 -->
     <span class="g_title">基本信息</span>
     <van-cell-group>
@@ -14,33 +14,32 @@
       <van-cell title="单位名称" :value="state.data.area" />
       <van-cell title="活动内容">
         <template #label>
-          <div class="bg-gray-100 p-2 h-20 overflow-auto">{{ state.data.content }}</div>
+          <div class="bg-gray-100 p-2 h-20 rounded overflow-auto">{{ state.data.content }}</div>
         </template>
       </van-cell>
     </van-cell-group>
   </div>
   <RowDivider />
   <!-- 2 -->
-  <div class="g_list_container">
+  <div class="g_container">
     <!-- 2.1 -->
     <span class="g_title">精彩影集</span>
     <ImageList :images="state.data.images" />
   </div>
   <RowDivider />
   <!-- 2.2 -->
-  <div class="g_list_container">
+  <div class="g_container">
     <span class="g_title">精彩视频</span>
-    <div class="flex space-x-2">
-      <div class="h-12 w-12 bg-blue-500"></div>
-      <div class="flex flex-col w-56">
-        <span>{{ state.data.video.name || '暂无' }}</span>
-        <span class="text-gray-400 text-sm mt-1">时长:&nbsp;{{ state.data.video.length || '暂无' }}</span>
-      </div>
-      <van-button type="primary" plain class="h-6 rounded-md my-auto">播放</van-button>
-    </div>
+    <VideoBox :video="state.data.video">
+      <template #button>
+        <div class="flex space-x-2 pl-44">
+          <van-button type="primary" plain class="h-6 rounded-md my-auto">播放</van-button>
+        </div>
+      </template>
+    </VideoBox>
   </div>
   <!-- 2.3 -->
-  <div class="g_list_container">
+  <div class="g_container">
     <div
       v-for="(item, index) in state.jumps"
       :key="index"
@@ -64,6 +63,7 @@ import { reactive } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import HeaderNav from '@/components/Common/HeaderNav.vue'
 import RowDivider from '@/components/Common/RowDivider.vue'
+import VideoBox from '@/components/Common/VideoBox.vue'
 import ImageList from '@/components/Common/ImageList.vue'
 import type { activityItem } from '@/models'
 import { getActivityById } from '@/services'
