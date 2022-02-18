@@ -11,19 +11,19 @@
                     <div class="my-auto ml-2 text-base">{{ item.title }}</div>
                 </div>
                 <div class="flex w-1/5 justify-end">
-                    <van-icon name="arrow" size="15" color="#D1D5DB" class="my-auto" />
+                    <van-icon name="arrow" size="15" color="#9CA3AF" class="my-auto" />
                 </div>
             </div>
             <div class="flex flex-col space-y-2 text-sm text-gray-500">
                 <div>活动开始时间:&nbsp;{{ item.start }}</div>
                 <div class="flex">
                     <div class="flex w-1/2 p-1 bg-gray-100">
-                        <span class="w-2/3">已报名人数</span>
-                        <span class="flex w-1/3 justify-end text-blue-400">{{ item.total }}人</span>
+                        <div class="w-2/3">已报名人数</div>
+                        <div class="flex w-1/3 justify-end text-blue-400">{{ item.total }}人</div>
                     </div>
                     <div class="flex w-1/2 p-1 bg-gray-100 ml-2">
-                        <span class="w-2/3">限额人数</span>
-                        <span class="flex w-1/3 justify-end text-blue-400">{{ item.restrict }}人</span>
+                        <div class="w-2/3">限额人数</div>
+                        <div class="flex w-1/3 justify-end text-blue-400">{{ item.restrict }}人</div>
                     </div>
                 </div>
             </div>

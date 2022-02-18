@@ -40,6 +40,7 @@ export interface personItem {
 export interface collectionitem {
     id: number,
     title: string,
+    time: string,
     images: string[]
 }
 

@@ -15,15 +15,23 @@
                 </div>
             </div>
             <div class="flex">
-                <div class="flex flex-col w-4/5 space-y-2 text-sm text-gray-500">
-                    <div class="flex">
-                        <div>报名时间:&nbsp;</div>
-                        <div class="text-blue-400">{{ item.time }}</div>
-                    </div>
-                    <div>联系电话:&nbsp;{{ item.tel }}</div>
-                    <div>居住地址:&nbsp;{{ item.location }}</div>
+                <div
+                    class="text-sm text-gray-300"
+                >{{ item.gender }}&nbsp;|&nbsp;{{ item.age }}岁&nbsp;|&nbsp;联系电话:&nbsp;{{ item.tel }}</div>
+                <van-icon name="phone" size="10" color="#60A5FA" class="my-auto ml-2" />
+            </div>
+            <div class="flex flex-col space-y-2 text-sm text-gray-500">
+                <div class="flex">
+                    <div>活动参与人:&nbsp;</div>
+                    <div class="text-blue-400">{{ item.attend }}</div>
                 </div>
-                <van-icon name="phone" size="20" color="#60A5FA" class="m-auto" />
+                <div>报名时间:&nbsp;{{ item.time }}</div>
+                <div>打卡时间:&nbsp;{{ item.clock }}</div>
+            </div>
+            <van-divider />
+            <div class="flex">
+                <van-icon name="location-o" color="#60A5FA" class="my-auto" />
+                <div class="text-gray-500 text-sm ml-1">居住地址:&nbsp;{{ item.location }}</div>
             </div>
         </div>
     </div>

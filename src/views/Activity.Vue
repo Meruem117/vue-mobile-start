@@ -1,7 +1,7 @@
 <template>
-    <van-nav-bar @click-left="back" class="bg-blue-400">
+    <van-nav-bar safe-area-inset-top @click-left="back" class="bg-blue-400">
         <template #left>
-            <van-icon name="arrow-left" size="16" color="white" class="my-auto" />
+            <van-icon name="arrow-left" size="20" color="white" class="my-auto" />
         </template>
         <template #title>
             <div class="text-white text-base">活动管理</div>

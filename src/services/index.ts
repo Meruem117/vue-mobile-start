@@ -1,4 +1,4 @@
-import type { applyItem, activityItem } from '@/models'
+import type { applyItem, activityItem, personItem, collectionitem } from '@/models'
 
 export async function getApplyList(): Promise<applyItem[]> {
     return [{
@@ -63,5 +63,37 @@ export async function getActivityList(): Promise<activityItem[]> {
         content: 'xxxxxxxxxxxxxxxxxxxx',
         images: [],
         video: ''
+    }]
+}
+
+export async function getPersonList(): Promise<personItem[]> {
+    return [{
+        id: 1,
+        name: 'XXX',
+        title: 'xxxxx xxxxx',
+        description: 'xxxxxxxxxxxxxxxxxxxx',
+        images: [],
+        video: ''
+    }, {
+        id: 2,
+        name: 'XXX',
+        title: 'xxxxx xxxxx',
+        description: 'xxxxxxxxxxxxxxxxxxxx',
+        images: [],
+        video: ''
+    }]
+}
+
+export async function getCollectionList(): Promise<collectionitem[]> {
+    return [{
+        id: 1,
+        title: 'XXXXXX',
+        time: 'xxxx-xx-xx xx:xx:xx',
+        images: []
+    }, {
+        id: 2,
+        title: 'XXXXXX',
+        time: 'xxxx-xx-xx xx:xx:xx',
+        images: []
     }]
 }

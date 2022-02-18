@@ -62,6 +62,14 @@ export default createRouter({
                 keepAlive: false
             },
             component: () => import('@/views/Collection.vue')
+        },
+        {
+            path: '/record',
+            name: 'record',
+            meta: {
+                keepAlive: false
+            },
+            component: () => import('@/views/Record.vue')
         }
     ]
 })

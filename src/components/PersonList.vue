@@ -14,26 +14,19 @@
                     <van-icon name="arrow" size="15" color="#9CA3AF" class="my-auto" />
                 </div>
             </div>
-            <div class="flex">
-                <div class="flex flex-col w-4/5 space-y-2 text-sm text-gray-500">
-                    <div class="flex">
-                        <div>报名时间:&nbsp;</div>
-                        <div class="text-blue-400">{{ item.time }}</div>
-                    </div>
-                    <div>联系电话:&nbsp;{{ item.tel }}</div>
-                    <div>居住地址:&nbsp;{{ item.location }}</div>
-                </div>
-                <van-icon name="phone" size="20" color="#60A5FA" class="m-auto" />
+            <div class="flex text-sm">
+                <div class="text-blue-400">荣誉称号:&nbsp;</div>
+                <div class="text-gray-500">{{ item.title }}</div>
             </div>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import type { applyItem } from '@/models'
+import type { personItem } from '@/models'
 
 type propsType = {
-    data: applyItem[]
+    data: personItem[]
 }
 
 const props = defineProps<propsType>()

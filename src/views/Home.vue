@@ -2,7 +2,7 @@
     <div class="flex flex-col bg-gradient-to-t from-blue-500 to-blue-400 p-4 pb-12">
         <div class="flex">
             <van-icon name="location-o" color="white" class="my-auto" />
-            <div class="text-white pl-1">{{ state.location }}</div>
+            <div class="text-white ml-1">{{ state.location }}</div>
         </div>
         <div class="flex flex-col mt-10">
             <div class="text-white text-2xl tracking-wider">新北E家</div>
@@ -31,7 +31,7 @@
                 <div class="text-blue-400 text-xl font-semibold -mb-2">待审核</div>
             </div>
         </div>
-        <div class="flex w-1/5 justify-end">
+        <div class="flex w-1/5 justify-end" @click="() => router.push('/record')">
             <div class="my-auto text-sm text-gray-300">查看更多</div>
             <van-icon name="arrow" size="15" color="#D1D5DB" class="my-auto" />
         </div>
