@@ -32,9 +32,7 @@
     <span class="g_title">精彩视频</span>
     <VideoBox :video="state.data.video">
       <template #button>
-        <div class="flex space-x-2 pl-44">
-          <van-button type="primary" plain class="h-6 rounded-md my-auto">播放</van-button>
-        </div>
+        <van-button type="primary" plain class="g_video_button">播放</van-button>
       </template>
     </VideoBox>
   </div>

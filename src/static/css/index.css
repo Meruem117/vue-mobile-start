@@ -13,3 +13,7 @@
 .g_title {
   @apply text-blue-400 text-lg font-semibold;
 }
+
+.g_video_button {
+  @apply h-6 rounded-md my-auto;
+}

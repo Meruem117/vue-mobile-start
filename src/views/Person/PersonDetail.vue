@@ -19,10 +19,8 @@
         <template #label>
           <VideoBox :video="state.data.video">
             <template #button>
-              <div class="flex space-x-2 pl-20">
-                <van-button type="primary" plain class="h-6 rounded-md my-auto">播放</van-button>
-                <van-button type="danger" plain class="h-6 rounded-md my-auto">重录</van-button>
-              </div>
+              <van-button type="primary" plain class="g_video_button">播放</van-button>
+              <van-button type="danger" plain class="g_video_button">重录</van-button>
             </template>
           </VideoBox>
         </template>
