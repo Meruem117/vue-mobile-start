@@ -15,7 +15,7 @@ import { useRoute } from 'vue-router'
 import HeaderNav from '@/components/Common/HeaderNav.vue'
 import CommentList from '@/components/Common/CommentList.vue'
 import type { commentItem } from '@/models'
-import { getCommentListByActivityId } from '@/services'
+import { getCommentListById } from '@/services'
 
 type stateType = {
   data: commentItem[]
@@ -29,7 +29,7 @@ const state: stateType = reactive({
 async function init() {
   if (route.query.id) {
     const id = parseInt(route.query.id.toString())
-    state.data = await getCommentListByActivityId(id)
+    state.data = await getCommentListById(id)
   }
 }
 

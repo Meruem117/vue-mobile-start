@@ -84,15 +84,6 @@ export default createRouter({
       component: () => import('@/views/Activity/RecordDetail.vue')
     },
     {
-      path: '/activityComment',
-      name: 'activityComment',
-      meta: {
-        keepAlive: false,
-        title: '评论记录'
-      },
-      component: () => import('@/views/Activity/ActivityComment.vue')
-    },
-    {
       path: '/review',
       name: 'review',
       meta: {
@@ -163,6 +154,15 @@ export default createRouter({
         title: '乐享集锦详情'
       },
       component: () => import('@/views/Collection/CollectionDetail.vue')
+    },
+    {
+      path: '/comment',
+      name: 'comment',
+      meta: {
+        keepAlive: false,
+        title: '评论记录'
+      },
+      component: () => import('@/views/Comment.vue')
     }
   ]
 })

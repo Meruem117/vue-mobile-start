@@ -76,7 +76,7 @@ const router = useRouter()
 const state: stateType = reactive({
   jumps: [
     { text: '查看报名记录', name: 'activityRecord' },
-    { text: '查看评论记录', name: 'activityComment' }
+    { text: '查看评论记录', name: 'comment' }
   ],
   data: {} as activityItem
 })
