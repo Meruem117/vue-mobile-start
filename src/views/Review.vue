@@ -29,7 +29,7 @@ type stateType = {
 
 const state: stateType = reactive({
   active: 0,
-  tabs: ['待审核', '审核不通过', '审核通过'],
+  tabs: ['To be reviewed', 'Denied', 'Pass'],
   data: []
 })
 

@@ -45,8 +45,8 @@ const state: stateType = reactive({
 })
 
 async function init() {
-  state.name = '张嘉译'
-  state.unit = '国宾社区第一网格'
+  state.name = 'XXX'
+  state.unit = 'XXXXXXXX'
   state.avatar = ''
 }
 

@@ -38,7 +38,7 @@ type stateType = {
 const router = useRouter()
 const state: stateType = reactive({
   active: 0,
-  tabs: ['未开始', '活动中', '已结束'],
+  tabs: ['To be reviewed', 'Denied', 'Pass'],
   data: []
 })
 

@@ -6,27 +6,27 @@
       <span class="text-white ml-2">{{ state.location }}</span>
     </div>
     <div class="flex flex-col mt-10">
-      <span class="text-white text-2xl tracking-wider">新北E家</span>
-      <span class="text-white text-sm">&lt;工作人员版&gt;</span>
+      <span class="text-white text-2xl tracking-wider">Vue Mobile</span>
+      <span class="text-white text-sm">&lt;Vant&gt;</span>
     </div>
   </div>
   <!-- 2 -->
   <div class="flex flex-col space-y-4 p-4 -mt-9">
     <!-- 2.1 -->
     <div class="flex space-x-2 bg-white rounded-md shadow-md p-4 text-gray-500 text-sm">
-      <span class="my-auto w-1/12 h-5 bg-blue-400 rounded px-1 text-white">公告</span>
+      <span class="my-auto w-1/12 h-5 bg-blue-400 rounded px-1 text-white">Intro</span>
       <span class="my-auto w-2/3">·&nbsp;{{ state.notice }}</span>
       <span class="my-auto">|</span>
-      <span class="my-auto flex w-1/12 pl-2">更多</span>
+      <span class="my-auto flex w-1/12 pl-2">More</span>
     </div>
     <!-- 2.2 -->
     <div class="jump_box">
-      <div class="jump_item" @click="() => router.push('/activity')">活动管理</div>
-      <div class="jump_item" @click="() => router.push('/review')">报名审核</div>
+      <div class="jump_item" @click="() => router.push('/activity')">Activity</div>
+      <div class="jump_item" @click="() => router.push('/review')">Review</div>
     </div>
     <div class="jump_box">
-      <div class="jump_item" @click="() => router.push('/person')">先锋人物</div>
-      <div class="jump_item" @click="() => router.push('/collection')">乐享集锦</div>
+      <div class="jump_item" @click="() => router.push('/person')">Person</div>
+      <div class="jump_item" @click="() => router.push('/collection')">Collection</div>
     </div>
   </div>
   <RowDivider />
@@ -35,12 +35,12 @@
     <!-- 3.1 -->
     <div class="flex w-4/5 justify-start">
       <div class="my-auto border_b">
-        <span class="g_title block -mb-2">待审核</span>
+        <span class="g_title block -mb-2">To be reviewed</span>
       </div>
     </div>
     <!-- 3.2 -->
     <div class="flex w-1/5 justify-end" @click="() => router.push('/review')">
-      <span class="my-auto text-gray-300 text-sm">查看更多</span>
+      <span class="my-auto text-gray-300 text-sm">More</span>
       <van-icon name="arrow" size="15" color="#D1D5DB" class="my-auto" />
     </div>
   </div>
@@ -75,8 +75,8 @@ const state: stateType = reactive({
 })
 
 async function init() {
-  state.location = '国宾社区第一网格'
-  state.notice = '众志成城, 共战疫情主题绘画活动'
+  state.location = 'XXXXXXXX'
+  state.notice = 'xxxxxxxxxxxxxxxx'
   state.data = await getReviewList()
 }
 

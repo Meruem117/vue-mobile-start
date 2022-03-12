@@ -43,7 +43,7 @@ export default createRouter({
       name: 'activity',
       meta: {
         keepAlive: false,
-        title: '活动管理'
+        title: 'Activity'
       },
       component: () => import('@/views/Activity.vue')
     },
@@ -52,7 +52,7 @@ export default createRouter({
       name: 'activityAdd',
       meta: {
         keepAlive: false,
-        title: '新增活动'
+        title: 'Add Activity'
       },
       component: () => import('@/views/Activity/ActivityAdd.vue')
     },
@@ -61,7 +61,7 @@ export default createRouter({
       name: 'activityDetail',
       meta: {
         keepAlive: false,
-        title: '活动详情'
+        title: 'Activity Detail'
       },
       component: () => import('@/views/Activity/ActivityDetail.vue')
     },
@@ -70,7 +70,7 @@ export default createRouter({
       name: 'activityRecord',
       meta: {
         keepAlive: false,
-        title: '报名记录'
+        title: 'Activity Record'
       },
       component: () => import('@/views/Activity/ActivityRecord.vue')
     },
@@ -79,7 +79,7 @@ export default createRouter({
       name: 'recordDetail',
       meta: {
         keepAlive: false,
-        title: '报名详情'
+        title: 'Record Detail'
       },
       component: () => import('@/views/Activity/RecordDetail.vue')
     },
@@ -88,7 +88,7 @@ export default createRouter({
       name: 'review',
       meta: {
         keepAlive: false,
-        title: '报名审核'
+        title: 'Review'
       },
       component: () => import('@/views/Review.vue')
     },
@@ -97,7 +97,7 @@ export default createRouter({
       name: 'reviewDetail',
       meta: {
         keepAlive: false,
-        title: '审核详情'
+        title: 'Review Detail'
       },
       component: () => import('@/views/Review/ReviewDetail.vue')
     },
@@ -106,7 +106,7 @@ export default createRouter({
       name: 'person',
       meta: {
         keepAlive: false,
-        title: '先锋人物'
+        title: 'Person'
       },
       component: () => import('@/views/Person.vue')
     },
@@ -115,7 +115,7 @@ export default createRouter({
       name: 'personAdd',
       meta: {
         keepAlive: false,
-        title: '新增先锋人物'
+        title: 'Add Person'
       },
       component: () => import('@/views/Person/PersonAdd.vue')
     },
@@ -124,7 +124,7 @@ export default createRouter({
       name: 'personDetail',
       meta: {
         keepAlive: false,
-        title: '先锋人物详情'
+        title: 'Person Detail'
       },
       component: () => import('@/views/Person/PersonDetail.vue')
     },
@@ -133,7 +133,7 @@ export default createRouter({
       name: 'collection',
       meta: {
         keepAlive: false,
-        title: '乐享集锦'
+        title: 'Collection'
       },
       component: () => import('@/views/Collection.vue')
     },
@@ -142,7 +142,7 @@ export default createRouter({
       name: 'collectionAdd',
       meta: {
         keepAlive: false,
-        title: '新增乐享集锦'
+        title: 'Add Collection'
       },
       component: () => import('@/views/Collection/CollectionAdd.vue')
     },
@@ -151,7 +151,7 @@ export default createRouter({
       name: 'collectionDetail',
       meta: {
         keepAlive: false,
-        title: '乐享集锦详情'
+        title: 'Collection Detail'
       },
       component: () => import('@/views/Collection/CollectionDetail.vue')
     },
@@ -160,7 +160,7 @@ export default createRouter({
       name: 'comment',
       meta: {
         keepAlive: false,
-        title: '评论记录'
+        title: 'Comment'
       },
       component: () => import('@/views/Comment.vue')
     }

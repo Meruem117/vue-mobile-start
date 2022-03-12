@@ -3,23 +3,23 @@
     <!-- 1 -->
     <div class="flex">
       <div class="border_b">
-        <span class="block text-3xl font-semibold -mb-4">新北E家</span>
+        <span class="block text-3xl font-semibold -mb-4">Vue Mobile</span>
       </div>
-      <span class="mt-4 ml-1">(工作人员版)</span>
+      <span class="mt-4 ml-1">(Vant)</span>
     </div>
     <!-- 2 -->
     <div class="flex flex-col space-y-8 p-1 mt-16">
       <div class="flex">
         <van-icon name="manager" size="30" color="#3B82F6" class="my-auto" />
-        <van-field type="tel" v-model="state.tel" placeholder="请输入电话" />
+        <van-field type="tel" v-model="state.tel" placeholder="Input your mobile" />
       </div>
       <div class="flex">
         <van-icon name="lock" size="30" color="#3B82F6" class="my-auto" />
-        <van-field type="password" v-model="state.password" placeholder="请输入密码" />
+        <van-field type="password" v-model="state.password" placeholder="Input your password" />
       </div>
     </div>
     <!-- 3 -->
-    <van-button type="primary" size="large" class="mt-12" @click="toHome">登&nbsp;&nbsp;录</van-button>
+    <van-button type="primary" size="large" class="mt-12" @click="toHome">Login</van-button>
   </div>
 </template>
 
