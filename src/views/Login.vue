@@ -39,7 +39,6 @@ const state: stateType = reactive({
 })
 
 function toHome() {
-  console.log(state)
   router.push('/home')
 }
 </script>
