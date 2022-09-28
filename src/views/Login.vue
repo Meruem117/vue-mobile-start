@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-screen px-8 pt-48">
+  <div class="home">
     <!-- 1 -->
     <div class="flex">
       <div class="border_b">
@@ -43,9 +43,16 @@ function toHome() {
 }
 </script>
 
-<style scoped>
-.border_b {
-  @apply border-b-4 border-solid border-blue-300;
-  @apply border-t-transparent border-x-transparent;
+<style lang="less" scoped>
+.home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 40px;
+  padding-top: 180px;
+  display: flex;
+  flex-direction: column;
 }
 </style>

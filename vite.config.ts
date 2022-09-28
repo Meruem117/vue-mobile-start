@@ -9,5 +9,15 @@ export default defineConfig({
     alias: {
       "@": resolve(__dirname, 'src')
     }
+  },
+  css: {
+    preprocessorOptions: {
+      less: {
+        modifyVars: {
+          hack: `true; @import (reference) "${resolve("src/static/less/index.less")}";`,
+        },
+        javascriptEnabled: true,
+      },
+    },
   }
 })
