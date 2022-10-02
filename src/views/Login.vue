@@ -1,13 +1,11 @@
 <template>
   <div class="home">
-    <!-- 1 -->
     <div class="flex">
       <div class="border_b">
         <span class="block text-3xl font-semibold -mb-4">Vue Mobile</span>
       </div>
       <span class="mt-4 ml-1">(Vant)</span>
     </div>
-    <!-- 2 -->
     <div class="flex flex-col space-y-8 p-1 mt-16">
       <div class="flex">
         <van-icon name="manager" size="30" color="#3B82F6" class="my-auto" />
@@ -18,7 +16,6 @@
         <van-field type="password" v-model="state.password" placeholder="Input your password" />
       </div>
     </div>
-    <!-- 3 -->
     <van-button type="primary" size="large" class="mt-12" @click="toHome">Login</van-button>
   </div>
 </template>
@@ -54,5 +51,6 @@ function toHome() {
   padding-top: 180px;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(to bottom, #fff, #a2e8);
 }
 </style>
