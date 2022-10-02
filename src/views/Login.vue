@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="flex">
+    <div class="flex mb-8">
       <div class="border_b">
         <span class="block text-3xl font-semibold -mb-4">Vue Mobile</span>
       </div>
@@ -43,6 +43,6 @@ function toHome() {
   padding-top: 180px;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom, #fff, #3B82F6);
+  background: linear-gradient(to bottom, #fff, @theme-color);
 }
 </style>

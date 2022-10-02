@@ -7,6 +7,7 @@ import {
 } from 'vant'
 import 'vant/lib/index.css'
 import '@/static/css/index.css'
+import '@/static/less/index.less'
 
 const app = createApp(App)
 app.use(router)
