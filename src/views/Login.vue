@@ -6,17 +6,9 @@
       </div>
       <span class="mt-4 ml-1">(Vant)</span>
     </div>
-    <div class="flex flex-col space-y-8 p-1 mt-16">
-      <div class="flex">
-        <van-icon name="manager" size="30" color="#3B82F6" class="my-auto" />
-        <van-field type="tel" v-model="state.tel" placeholder="Input your mobile" />
-      </div>
-      <div class="flex">
-        <van-icon name="lock" size="30" color="#3B82F6" class="my-auto" />
-        <van-field type="password" v-model="state.password" placeholder="Input your password" />
-      </div>
-    </div>
-    <van-button type="primary" size="large" class="mt-12" @click="toHome">Login</van-button>
+    <van-field v-model="state.username" left-icon="manager" placeholder="请输入用户名" clearable />
+    <van-field v-model="state.password" left-icon="lock" placeholder="请输入密码" clearable />
+    <van-button type="primary" size="large" class="mt-12" @click="toHome">登 陆</van-button>
   </div>
 </template>
 
@@ -25,13 +17,13 @@ import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
 
 type stateType = {
-  tel: string,
+  username: string,
   password: string
 }
 
 const router = useRouter()
 const state: stateType = reactive({
-  tel: '',
+  username: '',
   password: ''
 })
 
@@ -51,6 +43,6 @@ function toHome() {
   padding-top: 180px;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom, #fff, #a2e8);
+  background: linear-gradient(to bottom, #fff, #3B82F6);
 }
 </style>
