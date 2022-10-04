@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="main">
     <div class="flex mb-8">
       <div class="border_b">
         <span class="block text-3xl font-semibold -mb-4">Vue Mobile</span>
@@ -32,8 +32,8 @@ function toHome() {
 }
 </script>
 
-<style lang="less" scoped>
-.home {
+<style scoped lang="less">
+.main {
   position: absolute;
   top: 0;
   left: 0;
