@@ -1,14 +1,16 @@
 <template>
-  <div class="main">
-    <div class="flex mb-8">
-      <div class="border_b">
-        <span class="block text-3xl font-semibold -mb-4">Vue Mobile</span>
-      </div>
-      <span class="mt-4 ml-1">(Vant)</span>
+  <div class="login">
+    <div class="login-head">
+      <div class="head-title">Vue Mobile</div>
+      <div class="head-text">(Vant)</div>
     </div>
-    <van-field v-model="state.username" left-icon="manager" placeholder="请输入用户名" clearable />
-    <van-field v-model="state.password" left-icon="lock" placeholder="请输入密码" clearable />
-    <van-button type="primary" size="large" class="mt-12" @click="toHome">登 陆</van-button>
+    <van-cell-group inset>
+      <van-field v-model="state.username" left-icon="manager" placeholder="请输入用户名" clearable />
+      <van-field v-model="state.password" left-icon="lock" placeholder="请输入密码" clearable />
+    </van-cell-group>
+    <div class="login-button">
+      <van-button type="primary" size="large" @click="toHome">登 录</van-button>
+    </div>
   </div>
 </template>
 
@@ -28,21 +30,43 @@ const state: stateType = reactive({
 })
 
 function toHome() {
-  router.push('/home')
+  router.replace('/home')
 }
 </script>
 
 <style scoped lang="less">
-.main {
+.login {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 0 40px;
+  padding: 0 20px;
   padding-top: 180px;
   display: flex;
   flex-direction: column;
   background: linear-gradient(to bottom, #fff, @theme-color);
+
+  .login-head {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 40px;
+    padding: 0 20px;
+
+    .head-title {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .head-text {
+      margin-left: 5px;
+      font-size: 20px;
+    }
+  }
+
+  .login-button {
+    margin-top: 20px;
+    padding: 20px;
+  }
 }
 </style>
