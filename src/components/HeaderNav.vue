@@ -1,6 +1,6 @@
 <template>
-  <van-nav-bar safe-area-inset-top @click-left="() => router.go(-1)" class="bg-blue-400 py-2">
-    <template #left>
+  <van-nav-bar safe-area-inset-top @click-left="() => router.go(-1)" class="bg-blue-400">
+    <template #left v-if="props.left">
       <van-icon name="arrow-left" size="20" color="white" class="my-auto" />
     </template>
     <template #title>
@@ -19,6 +19,7 @@ const route = useRoute()
 const router = useRouter()
 const props = defineProps<{
   title?: string,
+  left?: boolean,
   right?: boolean
 }
 >()

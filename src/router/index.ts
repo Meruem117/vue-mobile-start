@@ -18,6 +18,7 @@ export default createRouter({
       path: '/login',
       name: 'login',
       meta: {
+        title: '登录',
         keepAlive: false
       },
       component: () => import('@/views/Login.vue')
@@ -26,6 +27,7 @@ export default createRouter({
       path: '/home',
       name: 'home',
       meta: {
+        title: '首页',
         keepAlive: false
       },
       component: () => import('@/views/Home.vue')
@@ -34,6 +36,7 @@ export default createRouter({
       path: '/chart',
       name: 'chart',
       meta: {
+        title: '统计',
         keepAlive: false
       },
       component: () => import('@/views/Chart.vue')
