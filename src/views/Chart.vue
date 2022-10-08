@@ -1,10 +1,12 @@
 <template>
+  <HeaderNav />
   <BottomTab :active="1" />
 </template>
 
 <script setup lang="ts">
 import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
+import HeaderNav from '@/components/HeaderNav.vue'
 import BottomTab from '@/components/BottomTab..vue'
 
 type stateType = {

@@ -40,14 +40,6 @@ export default createRouter({
         keepAlive: false
       },
       component: () => import('@/views/Chart.vue')
-    },
-    {
-      path: '/mine',
-      name: 'mine',
-      meta: {
-        keepAlive: false
-      },
-      component: () => import('@/views/Mine.vue')
     }
   ]
 })
