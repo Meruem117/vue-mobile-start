@@ -1,4 +1,4 @@
-export function convertDatetime(datetime: Date): string {
+export function formatTime(datetime: Date): string {
   const year = datetime.getFullYear()
   const month = datetime.getMonth() > 9 ? datetime.getMonth() : '0' + datetime.getMonth()
   const day = datetime.getDay() > 9 ? datetime.getDay() : '0' + datetime.getDay()
