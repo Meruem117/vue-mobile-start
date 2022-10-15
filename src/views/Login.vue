@@ -9,14 +9,16 @@
       <van-field v-model="state.password" left-icon="lock" placeholder="请输入密码" clearable />
     </van-cell-group>
     <div class="login-button">
-      <van-button type="primary" size="large" @click="toHome">登 录</van-button>
+      <van-button type="primary" size="large" @click="login">登 录</van-button>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { Toast } from 'vant';
 import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
+import { loginUser } from '@/services/user'
 
 type stateType = {
   username: string,
@@ -29,8 +31,26 @@ const state: stateType = reactive({
   password: ''
 })
 
-function toHome() {
-  router.replace('/home')
+function check(): boolean {
+  if (!state.username) {
+    Toast({ message: '请输入用户名' })
+    return false
+  }
+  if (!state.password) {
+    Toast({ message: '请输入密码' })
+    return false
+  }
+  return true
+}
+
+function login() {
+  if (!check()) return
+  loginUser({
+    name: state.username,
+    password: state.password
+  }).then(res => {
+    console.log(res)
+  })
 }
 </script>
 

@@ -18,7 +18,7 @@ export interface userDetailItem {
     created?: string
 }
 
-export interface userCheckItem {
+export interface userLoginItem {
     name: string,
     password: string,
 }
