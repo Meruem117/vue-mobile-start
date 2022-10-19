@@ -1,8 +1,8 @@
 import axios from 'axios'
 import type { upItem, upInfoItem, upDetailItem } from '@/models/up'
-import { UP_LIST_SIZE } from '@/constant'
+import { BASE_LIST_SIZE } from '@/constant'
 
-export async function getUps(start: number, size: number = UP_LIST_SIZE): Promise<upItem[]> {
+export async function getUps(start: number, size: number = BASE_LIST_SIZE): Promise<upItem[]> {
     const response = await axios.get('/api/up/get', { params: { start, size } })
     return response.data
 }

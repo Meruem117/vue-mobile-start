@@ -3,16 +3,7 @@ import tsImportPluginFactory from 'ts-import-plugin'
 
 export default {
   devServer: {
-    port: 3000,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:8080',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/api': '',
-        }
-      }
-    },
+    port: 3000
   },
   chainWebpack: config => {
     config.module
