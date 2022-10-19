@@ -49,7 +49,9 @@ function login() {
     name: state.username,
     password: state.password
   }).then(res => {
-    console.log(res)
+    if (res.id) {
+      router.replace('/home')
+    }
   })
 }
 </script>
