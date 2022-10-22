@@ -5,8 +5,8 @@
       <div class="head-text">(Vant)</div>
     </div>
     <van-cell-group inset>
-      <van-field v-model="state.username" left-icon="manager" placeholder="请输入用户名" clearable />
-      <van-field v-model="state.password" left-icon="lock" placeholder="请输入密码" clearable />
+      <van-field v-model="state.username" placeholder="请输入用户名" clearable />
+      <van-field v-model="state.password" placeholder="请输入密码" clearable />
     </van-cell-group>
     <div class="login-button">
       <van-button type="primary" size="large" @click="login">登 录</van-button>
@@ -18,6 +18,7 @@
 import { Toast } from 'vant';
 import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
+import { useUserStore } from '@/stores/user'
 import { loginUser } from '@/services/user'
 
 type stateType = {
@@ -26,6 +27,7 @@ type stateType = {
 }
 
 const router = useRouter()
+const store = useUserStore()
 const state: stateType = reactive({
   username: '',
   password: ''
@@ -50,7 +52,13 @@ function login() {
     password: state.password
   }).then(res => {
     if (res.id) {
-      router.replace('/home')
+      store.setUserInfo(res)
+      Toast({ message: '登录成功' })
+      setTimeout(() => {
+        router.replace('/home')
+      }, 500)
+    } else {
+      Toast({ message: '登录失败，用户名或密码错误' })
     }
   })
 }
