@@ -13,5 +13,10 @@ export const useUserStore = defineStore('user', {
     getUserInfo(state) {
       return state.user
     }
+  },
+  actions: {
+    setUserInfo(data: userDetailItem) {
+      this.$state.user = data
+    }
   }
 })
