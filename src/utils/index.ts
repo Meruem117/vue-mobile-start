@@ -7,3 +7,9 @@ export function formatTime(datetime: Date): string {
   const second = datetime.getSeconds() > 9 ? datetime.getSeconds() : '0' + datetime.getSeconds()
   return year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second
 }
+
+export function getGender(gender: string): number {
+  if (gender === '女') return 0
+  if (gender === '男') return 1
+  return 2
+}
