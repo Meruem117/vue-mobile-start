@@ -7,7 +7,7 @@
 import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
 import HeaderNav from '@/components/HeaderNav.vue'
-import BottomTab from '@/components/BottomTab.vue'
+import BottomTab from '@/components/BottomTabbar.vue'
 
 type stateType = {
 }

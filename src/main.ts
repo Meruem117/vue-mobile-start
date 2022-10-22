@@ -3,7 +3,7 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 import {
-    Button, Icon, Tabbar, TabbarItem, NavBar, Cell, CellGroup, Tab, Tabs,
+    Button, Icon, Tabbar, TabbarItem, NavBar, Cell, CellGroup, Tab, Tabs, Row, Col,
     Divider, Form, Field, Popup, Picker, DatetimePicker, Uploader, Image, Radio, RadioGroup
 } from 'vant'
 import 'vant/lib/index.css'
@@ -33,4 +33,6 @@ app.use(Button)
     .use(Image)
     .use(Radio)
     .use(RadioGroup)
+    .use(Row)
+    .use(Col)
 app.mount('#app')

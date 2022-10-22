@@ -9,7 +9,11 @@ export function formatTime(datetime: Date): string {
 }
 
 export function getGender(gender: string): number {
-  if (gender === '女') return 0
-  if (gender === '男') return 1
-  return 2
+  if (gender === '女') {
+    return 0
+  } else if (gender === '男') {
+    return 1
+  } else {
+    return 2
+  }
 }
