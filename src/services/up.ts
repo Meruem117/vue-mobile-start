@@ -7,26 +7,6 @@ export async function getUps(start: number, size: number = BASE_LIST_SIZE): Prom
     return response.data
 }
 
-export async function getAllUps(): Promise<upItem[]> {
-    const response = await axios.get('/api/up/all')
-    return response.data
-}
-
-export async function addUp(up: upItem): Promise<number> {
-    const response = await axios.post('/api/up/add', up)
-    return response.data
-}
-
-export async function updateUp(up: upItem): Promise<number> {
-    const response = await axios.post('/api/up/update', up)
-    return response.data
-}
-
-export async function deleteUp(id: number): Promise<number> {
-    const response = await axios.post('/api/up/delete', id)
-    return response.data
-}
-
 export async function getUpInfo(mid: string): Promise<upInfoItem> {
     const response = await axios.get(`/card?mid=${mid}`)
     return response.data.data.card
