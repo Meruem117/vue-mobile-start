@@ -141,16 +141,16 @@ onMounted(() => {
   }
 
   .main-list {
-    padding-bottom: 50px;
+    padding-bottom: 40px;
 
     .main-scroll-content {
       min-height: calc(100vh - 500px);
 
       .main-list-content {
-        padding-top: 10px;
+        padding: 10px;
 
         .main-list-item {
-          margin-bottom: 10px;
+          margin-bottom: 15px;
           padding: 10px 16px;
           display: flex;
           align-items: center;
