@@ -17,6 +17,17 @@
       </van-col>
     </van-row>
     <van-divider>关注列表</van-divider>
+    <div class="main-list">
+      <van-pull-refresh class="main-scroll-content" v-model="state.refreshing" @refresh="onRefresh">
+        <van-empty description="暂无数据" v-if="state.upList.length === 0" />
+        <van-list class="main-list-content" v-else v-model="state.loading" :immediate-check="false"
+          :finished="state.finished" finished-text="没有更多了~~" @load="getUpList" :offset="20">
+          <div class="main-list-item" v-for="(item, index) in state.upList" :key="index" @click="toDetail(item.id)">
+
+          </div>
+        </van-list>
+      </van-pull-refresh>
+    </div>
   </div>
   <BottomTab :active="0" />
 </template>
@@ -30,23 +41,52 @@ import { useUserStore } from '@/stores/user'
 import type { upItem } from '@/models/up'
 import { getUps } from '@/services/up'
 import { getGender } from '@/utils'
-import { GENDER_AVATAR_SRC } from '@/constant'
+import { GENDER_AVATAR_SRC, BASE_LIST_SIZE } from '@/constant'
 
 type stateType = {
   upList: upItem[],
-  page: number
+  page: number,
+  loading: boolean,
+  refreshing: boolean,
+  finished: boolean
 }
 
 const router = useRouter()
 const store = useUserStore()
 const state: stateType = reactive({
   upList: [],
-  page: 0
+  page: 0,
+  loading: false,
+  refreshing: false,
+  finished: false
 })
 
 function getUpList(): void {
   getUps(state.page).then(res => {
-    state.upList = res
+    state.page++
+    state.loading = false
+    state.refreshing = false
+    state.finished = res.length < BASE_LIST_SIZE
+    if (state.page === 0) {
+      state.upList = res
+    } else {
+      state.upList = state.upList.concat(res)
+    }
+  })
+}
+
+function onRefresh(): void {
+  state.page = 0
+  state.upList = []
+  getUpList()
+}
+
+function toDetail(id: number): void {
+  router.push({
+    path: '',
+    query: {
+      id
+    }
   })
 }
 
@@ -97,6 +137,17 @@ onMounted(() => {
         }
       }
     }
+  }
+
+  .main-list {
+    .main-scroll-content {
+      min-height: calc(100vh - 270px);
+
+      .main-list-content {
+        padding-top: 10px;
+      }
+    }
+
   }
 }
 </style>
