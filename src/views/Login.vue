@@ -45,7 +45,7 @@ function check(): boolean {
   return true
 }
 
-function login() {
+function login(): void {
   if (!check()) return
   loginUser({
     name: state.username,
