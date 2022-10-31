@@ -4,7 +4,8 @@ import App from './App.vue'
 import router from './router'
 import {
     Button, Icon, Tabbar, TabbarItem, NavBar, Cell, CellGroup, Tab, Tabs, Row, Col,
-    Divider, Form, Field, Popup, Picker, DatetimePicker, Uploader, Image, Radio, RadioGroup
+    Divider, Form, Field, Popup, Picker, DatetimePicker, Uploader, Image, Radio, RadioGroup,
+    PullRefresh, List, Empty
 } from 'vant'
 import 'vant/lib/index.css'
 import '@/static/css/index.css'
@@ -35,4 +36,7 @@ app.use(Button)
     .use(RadioGroup)
     .use(Row)
     .use(Col)
+    .use(PullRefresh)
+    .use(List)
+    .use(Empty)
 app.mount('#app')

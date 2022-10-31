@@ -23,7 +23,8 @@
         <van-list class="main-list-content" v-else v-model="state.loading" :immediate-check="false"
           :finished="state.finished" finished-text="没有更多了~~" @load="getUpList" :offset="20">
           <div class="main-list-item" v-for="(item, index) in state.upList" :key="index" @click="toDetail(item.id)">
-
+            <van-icon name="award" size="24" />
+            <div class="item-name">{{ item.name || '暂无' }}</div>
           </div>
         </van-list>
       </van-pull-refresh>
@@ -140,11 +141,31 @@ onMounted(() => {
   }
 
   .main-list {
+    padding-bottom: 50px;
+
     .main-scroll-content {
-      min-height: calc(100vh - 270px);
+      min-height: calc(100vh - 500px);
 
       .main-list-content {
         padding-top: 10px;
+
+        .main-list-item {
+          margin-bottom: 10px;
+          padding: 10px 16px;
+          display: flex;
+          align-items: center;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+
+          .item-name {
+            margin-left: 10px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
       }
     }
 
