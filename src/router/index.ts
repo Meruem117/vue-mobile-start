@@ -33,6 +33,24 @@ export default createRouter({
       component: () => import('@/views/Home.vue')
     },
     {
+      path: '/up',
+      name: 'up',
+      meta: {
+        title: 'Up主',
+        keepAlive: false
+      },
+      component: () => import('@/views/Up.vue')
+    },
+    {
+      path: '/video',
+      name: 'video',
+      meta: {
+        title: '视频',
+        keepAlive: false
+      },
+      component: () => import('@/views/Video.vue')
+    },
+    {
       path: '/chart',
       name: 'chart',
       meta: {

@@ -84,7 +84,7 @@ function onRefresh(): void {
 
 function toDetail(id: number): void {
   router.push({
-    path: '',
+    path: '/up',
     query: {
       id
     }
