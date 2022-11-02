@@ -7,11 +7,6 @@ export async function getUps(start: number, size: number = BASE_LIST_SIZE): Prom
     return response.data
 }
 
-export async function getUpInfo(mid: string): Promise<upInfoItem> {
-    const response = await axios.get(`/card?mid=${mid}`)
-    return response.data.data.card
-}
-
 export async function getUpDetail(mid: string): Promise<upDetailItem> {
     const response = await axios.get(`/card?mid=${mid}`)
     return response.data.data

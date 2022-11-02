@@ -1,5 +1,6 @@
 <template>
-  <HeaderNav />
+  <HeaderNav left />
+  
 </template>
 
 <script setup lang="ts">
@@ -8,6 +9,7 @@ import { useRouter, useRoute } from 'vue-router'
 import HeaderNav from '@/components/HeaderNav.vue'
 import type { upDetailItem } from '@/models/up'
 import type { videoItem } from '@/models/video'
+import { getUpDetail } from '@/services/up'
 
 interface stateItem {
   mid: string,
@@ -37,7 +39,9 @@ const state: stateItem = reactive({
 })
 
 function getUpInfo(): void {
-
+  getUpDetail(state.mid).then(res => {
+    state.up = res
+  })
 }
 
 function getVideoList(): void {
