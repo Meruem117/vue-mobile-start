@@ -22,7 +22,7 @@
         <van-empty description="暂无数据" v-if="state.upList.length === 0" />
         <van-list class="main-list-content" v-else v-model="state.loading" :immediate-check="false"
           :finished="state.finished" finished-text="没有更多了~~" @load="getUpList" :offset="20">
-          <div class="main-list-item" v-for="(item, index) in state.upList" :key="index" @click="toDetail(item.id)">
+          <div class="main-list-item" v-for="(item, index) in state.upList" :key="index" @click="toDetail(item.mid)">
             <van-icon name="award" size="24" />
             <div class="item-name">{{ item.name || '暂无' }}</div>
           </div>
@@ -82,11 +82,11 @@ function onRefresh(): void {
   getUpList()
 }
 
-function toDetail(id: number): void {
+function toDetail(mid: string): void {
   router.push({
     path: '/up',
     query: {
-      id
+      mid
     }
   })
 }
