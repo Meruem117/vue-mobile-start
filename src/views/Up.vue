@@ -1,6 +1,6 @@
 <template>
   <HeaderNav left />
-  
+
 </template>
 
 <script setup lang="ts">
@@ -10,6 +10,7 @@ import HeaderNav from '@/components/HeaderNav.vue'
 import type { upDetailItem } from '@/models/up'
 import type { videoItem } from '@/models/video'
 import { getUpDetail } from '@/services/up'
+import { getVideos } from '@/services/video'
 
 interface stateItem {
   mid: string,
@@ -45,12 +46,16 @@ function getUpInfo(): void {
 }
 
 function getVideoList(): void {
-
+  getVideos(state.mid, state.page).then(res => {
+    state.page++
+    state.videos = res
+  })
 }
 
 onMounted(() => {
   state.mid = route.query.mid?.toString() || ''
   getUpInfo()
+  getVideoList()
 })
 </script>
 
