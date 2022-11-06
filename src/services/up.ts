@@ -1,5 +1,5 @@
 import axios from 'axios'
-import type { upItem, upInfoItem, upDetailItem } from '@/models/up'
+import type { upItem, upDetailItem } from '@/models/up'
 import { BASE_LIST_SIZE } from '@/constant'
 
 export async function getUps(start: number, size: number = BASE_LIST_SIZE): Promise<upItem[]> {
