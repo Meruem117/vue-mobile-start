@@ -4,9 +4,18 @@
     <div class="up-info-head">
       <img :src="state.up.card.face" />
       <div class="up-info-num">
-        <div class="num-follower">{{ convertNumber(state.up.follower) }}</div>
-        <div class="num-attention">{{ convertNumber(state.up.card.attention) }}</div>
-        <div class="num-like">{{ convertNumber(state.up.like_num) }}</div>
+        <div class="num-item">
+          {{ convertNumber(state.up.follower) }}
+          <span>粉丝</span>
+        </div>
+        <div class="num-item">
+          {{ convertNumber(state.up.card.attention) }}
+          <span>关注</span>
+        </div>
+        <div class="num-item">
+          {{ convertNumber(state.up.like_num) }}
+          <span>获赞</span>
+        </div>
       </div>
     </div>
     <div class="up-info-content"></div>
@@ -74,7 +83,7 @@ onMounted(() => {
 
 <style scoped lang="less">
 .up-info {
-  padding: 20px;
+  padding: 20px 40px;
 
   .up-info-head {
     display: flex;
@@ -82,16 +91,28 @@ onMounted(() => {
     justify-content: space-between;
 
     img {
-      width: 50px;
+      width: 60px;
       border-radius: 50%;
     }
 
     .up-info-num {
-      width: 80%;
+      width: 60%;
       padding: 0 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      .num-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 15px;
+
+        span {
+          color: #999;
+          font-size: 12px;
+        }
+      }
     }
   }
 }
