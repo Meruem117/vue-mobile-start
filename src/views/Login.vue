@@ -5,8 +5,8 @@
       <div class="head-text">(Vant)</div>
     </div>
     <van-cell-group inset>
-      <van-field v-model="state.username" placeholder="请输入用户名" clearable />
-      <van-field v-model="state.password" placeholder="请输入密码" clearable />
+      <van-field v-model="state.username" placeholder="请输入用户名" clearable autocomplete="off" />
+      <van-field v-model="state.password" placeholder="请输入密码" type="password" clearable autocomplete="off" />
     </van-cell-group>
     <div class="login-button">
       <van-button type="primary" size="large" @click="login">登 录</van-button>
