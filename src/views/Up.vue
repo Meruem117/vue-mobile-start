@@ -276,6 +276,7 @@ onMounted(() => {
           .item-bottom-time {
             position: absolute;
             right: 16px;
+            bottom: 10px;
             font-size: 14px;
           }
         }
