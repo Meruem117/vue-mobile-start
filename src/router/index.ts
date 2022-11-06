@@ -36,7 +36,7 @@ export default createRouter({
       path: '/up',
       name: 'up',
       meta: {
-        title: 'Up主',
+        title: '',
         keepAlive: false
       },
       component: () => import('@/views/Up.vue')
@@ -45,7 +45,7 @@ export default createRouter({
       path: '/video',
       name: 'video',
       meta: {
-        title: '视频',
+        title: '',
         keepAlive: false
       },
       component: () => import('@/views/Video.vue')

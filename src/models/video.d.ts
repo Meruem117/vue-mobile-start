@@ -1,6 +1,7 @@
 export interface videoItem {
     bvid: string,
     title: string,
+    author: string,
     pic: string,
     length: string,
     play: number,
