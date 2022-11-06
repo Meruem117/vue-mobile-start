@@ -12,7 +12,10 @@ export interface upDetailItem {
         face: string,
         sign: string,
         fans: number,
-        attention: number
+        attention: number,
+        Official: {
+            title: string
+        }
     },
     archive_count: number,
     follower: number,

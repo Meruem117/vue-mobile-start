@@ -18,8 +18,13 @@
         </div>
       </div>
     </div>
-    <div class="up-info-content"></div>
+    <div class="up-info-content">
+      <div class="up-info-name">{{ state.up.card.name }}</div>
+      <div class="up-info-title"><span>{{ state.up.card.Official.title }}</span></div>
+      <div class="up-info-sign">{{ state.up.card.sign }}</div>
+    </div>
   </div>
+  <van-divider>投稿</van-divider>
 </template>
 
 <script setup lang="ts">
@@ -51,7 +56,10 @@ const state: stateItem = reactive({
       face: '',
       sign: '',
       fans: 0,
-      attention: 0
+      attention: 0,
+      Official: {
+        title: ''
+      }
     },
     archive_count: 0,
     follower: 0,
@@ -113,6 +121,33 @@ onMounted(() => {
           font-size: 12px;
         }
       }
+    }
+  }
+
+  .up-info-content {
+    margin-top: 20px;
+
+    .up-info-name {
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    .up-info-title {
+      margin-top: 10px;
+
+      span {
+        padding: 4px 10px;
+        font-size: 12px;
+        border-radius: 15px;
+        background-color: #f3f4f6;
+      }
+    }
+
+    .up-info-sign {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 20px;
+      word-break: break-all;
     }
   }
 }
