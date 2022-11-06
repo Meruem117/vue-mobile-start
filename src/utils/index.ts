@@ -17,3 +17,11 @@ export function getGender(gender: string): number {
     return 2
   }
 }
+
+export function roundFun(value: number, n: number): number {
+  return Math.round(value * Math.pow(10, n)) / Math.pow(10, n)
+}
+
+export function convertNumber(play: number): string | number {
+  return play > 10000 ? roundFun(play /= 10000, 1) + '万' : play
+}

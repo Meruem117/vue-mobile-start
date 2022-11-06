@@ -4,15 +4,6 @@ export interface upItem {
     name: string
 }
 
-export interface upInfoItem {
-    mid: string,
-    name: string,
-    face: string,
-    Official: {
-        title: string
-    }
-}
-
 export interface upDetailItem {
     card: {
         mid: string,
@@ -23,5 +14,7 @@ export interface upDetailItem {
         fans: number,
         attention: number
     },
-    archive_count: number
+    archive_count: number,
+    follower: number,
+    like_num: number
 }
