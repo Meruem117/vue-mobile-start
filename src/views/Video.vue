@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import { reactive, onMounted } from 'vue'
-import { useRouter, useRoute } from 'vue-router'
+import { useRoute } from 'vue-router'
 import HeaderNav from '@/components/HeaderNav.vue'
 import { videoDetailItem } from '@/models/video'
 import { getVideoDetail } from '@/services/video'
@@ -15,7 +15,6 @@ interface stateItem {
   video: videoDetailItem
 }
 
-const router = useRouter()
 const route = useRoute()
 const state: stateItem = reactive({
   bvid: '',
@@ -23,7 +22,9 @@ const state: stateItem = reactive({
 })
 
 function loadVideo(): void {
-
+  getVideoDetail(state.bvid).then(res => {
+    state.video = res
+  })
 }
 
 onMounted(() => {

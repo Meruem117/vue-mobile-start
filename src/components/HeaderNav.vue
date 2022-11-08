@@ -4,7 +4,7 @@
       <van-icon name="arrow-left" size="20" color="white" class="my-auto" />
     </template>
     <template #title>
-      <div class="text-white text-xl tracking-wider">{{ props.title || route.meta.title }}</div>
+      <div class="title">{{ props.title || route.meta.title }}</div>
     </template>
     <template #right v-if="props.right">
       <slot name="right"></slot>
@@ -24,3 +24,14 @@ const props = defineProps<{
 }
 >()
 </script>
+
+<style>
+.title {
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+</style>
